@@ -60,7 +60,7 @@ export const heroData: HeroData = {
         {
             label: "React Lab",
             href: "/practice",
-            variant: "primary",
+            variant: "primaryDark",
         },
     ],
 };
