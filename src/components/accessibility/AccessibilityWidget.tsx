@@ -176,12 +176,7 @@ export default function AccessibilityWidget() {
                             className={styles.resetBtn}
                         /> */}
 
-                        <button text="Reset"
-                            variant="primary"
-                            icon=""
-                            showArrow={false}
-                            onClick={reset}
-                            className={styles.resetBtn}>click me</button>
+
                     </div>
                 </div>
             </div>
