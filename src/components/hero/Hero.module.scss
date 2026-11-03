@@ -1,0 +1,171 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+.wrap {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 40px;
+    align-items: center;
+}
+
+// Hero Content
+.content {
+    min-width: 0;
+
+    .eyebrow {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--muted);
+        margin-bottom: 8px;
+    }
+
+    h1 {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        font-weight: 700;
+        color: var(--navy);
+    }
+}
+
+// Animated Role
+.role {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 1.8em;
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 10px 0 14px;
+    color: var(--saffron);
+
+    span:first-child {
+        display: inline-block;
+    }
+}
+
+.caret {
+    display: inline-block;
+    width: 2px;
+    height: 1.1em;
+    background: var(--saffron);
+    margin-left: 4px;
+    vertical-align: middle;
+    animation: blink 1s steps(1) infinite;
+    flex-shrink: 0;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+// Description
+.description {
+    color: var(--muted);
+    max-width: 520px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+// Buttons
+.btns {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    border: 1.5px solid var(--navy);
+    transition: 0.3s ease;
+    cursor: pointer;
+    background: transparent;
+    color: var(--navy);
+    text-decoration: none;
+    font-family: inherit;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(18, 54, 95, 0.15);
+    }
+
+    &:focus-visible {
+        outline: 3px solid var(--saffron);
+        outline-offset: 4px;
+    }
+}
+
+.primary {
+    background: var(--navy);
+    color: #fff;
+
+    &:hover {
+        background: #2a5d96;
+        color: #fff;
+    }
+}
+
+// Profile Avatar
+.avatar {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--navy), #2a5d96);
+
+    display: grid;
+    place-items: center;
+
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 800;
+
+    border: 6px solid #fff;
+    box-shadow: 0 10px 30px rgba(18, 54, 95, 0.2);
+
+    overflow: hidden;
+    justify-self: center;
+    flex-shrink: 0;
+}
+
+.profileImage {
+    object-fit: cover;
+}
+
+// Screen Reader Only
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+// Reduced Motion
+@media (prefers-reduced-motion: reduce) {
+    .caret {
+        animation: none;
+    }
+
+    .btn {
+        transition: none;
+    }
+}

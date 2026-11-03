@@ -1,0 +1,100 @@
+// :global(.a11y-text-size *:not([data-no-a11y]):not([data-no-a11y] *)) {
+//     font-size: 200% !important;
+// }
+
+// :global(.a11y-line-spacing *:not([data-no-a11y]):not([data-no-a11y] *)) {
+//     line-height: 2 !important;
+// }
+
+:global(.a11y-letter-spacing *:not([data-no-a11y]):not([data-no-a11y] *)) {
+    letter-spacing: 0.12em !important;
+}
+
+:global(.a11y-greyscale *:not([data-no-a11y]):not([data-no-a11y] *)) {
+    filter: grayscale(100%);
+}
+
+// .a11y-line-spacing,
+// .a11y-line-spacing * {
+//     line-height: 2 !important;
+// }
+
+.a11y-letter-spacing,
+.a11y-letter-spacing * {
+    letter-spacing: 0.12em !important;
+}
+
+.a11y-hide-images img,
+.a11y-hide-images [role='img'],
+.a11y-hide-images video,
+.a11y-hide-images picture {
+    visibility: hidden !important;
+}
+
+.a11y-greyscale {
+    filter: grayscale(100%);
+}
+
+.a11y-low-sat {
+    filter: saturate(25%);
+}
+
+.a11y-high-contrast {
+    filter: contrast(160%);
+}
+
+.a11y-dark {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.a11y-dark img,
+.a11y-dark video,
+.a11y-dark [style*='background-image'] {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.a11y-highlight-links a,
+.a11y-highlight-links a:visited {
+    background-color: #fff3cd !important;
+    text-decoration: underline 2px solid #e24b4a !important;
+    color: #1a1a1a !important;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+.a11y-big-cursor,
+.a11y-big-cursor * {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M8 4 L8 26 L14 20 L18 28 L21 27 L17 19 L24 19 Z' fill='black' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E") 0 0,
+        auto !important;
+}
+
+.a11y-focus-indicator *:focus-visible {
+    outline: 3px solid #e24b4a !important;
+    outline-offset: 3px !important;
+    border-radius: 3px;
+}
+
+.a11y-reduce-motion *,
+.a11y-reduce-motion *::before,
+.a11y-reduce-motion *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+}
+
+.a11y-dyslexia,
+.a11y-dyslexia * {
+    font-family: 'OpenDyslexic', 'Comic Sans MS', cursive !important;
+}
+
+.a11y-reading-ruler-line {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(226, 75, 74, 0.5);
+    pointer-events: none;
+    z-index: 9999;
+    transition: top 0.05s linear;
+}

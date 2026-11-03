@@ -1,0 +1,291 @@
+// $ease: cubic-bezier(0.76, 0, 0.24, 1);
+
+// .buttonWrapper {
+//     position: relative;
+//     display: flex;
+
+//     &.center {
+//         justify-content: center;
+//     }
+
+//     &.right {
+//         justify-content: flex-end;
+//     }
+// }
+
+// .ctaButton {
+//     --arrowSize: 18px;
+//     --gap: 16px;
+//     --shift: calc((var(--arrowSize) + var(--gap)) / 2);
+//     --ink: var(--white);
+//     --inkHover: var(--white);
+//     // --lineColor: 255, 255, 255;
+//     --fillColor: var(--navy);
+
+//     position: relative;
+//     display: inline-flex;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 10px;
+//     height: 64px;
+//     padding: 0 32px;
+//     overflow: hidden;
+//     border: 0;
+//     background: var(--saffron);
+//     color: #000;
+//     text-decoration: none;
+//     cursor: pointer;
+//     flex: none;
+//     width: fit-content;
+
+//     @media (max-width: 991px) {
+//         --gap: 12px;
+//         height: 50px;
+//         padding: 0 24px;
+//     }
+
+//     .fill {
+//         position: absolute;
+//         inset: 0;
+//         background: var(--navy);
+//         transform: scaleY(1);
+//         transform-origin: bottom center;
+//         transition: transform 0.52s $ease;
+
+//         &.borderFill {
+//             background: orange;
+//             transform: none;
+//             transition: opacity 0.3s linear;
+//         }
+//     }
+
+//     .line {
+//         position: absolute;
+//         inset: 0;
+//         padding: 2px;
+//         opacity: 0;
+//         // background: linear-gradient(177deg,
+//         //         rgba(var(--lineColor), 0) 0%,
+//         //         rgb(var(--lineColor)) 50%,
+//         //         rgba(var(--lineColor), 0) 100%);
+//         // -webkit-mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+//         // -webkit-mask-composite: xor;
+//         // mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+//         // mask-composite: exclude;
+//         transition: opacity 0.34s linear 0.14s;
+//     }
+
+//     .label {
+//         position: relative;
+//         font-family: inherit;
+//         font-size: 12px;
+//         font-weight: 500;
+//         letter-spacing: 0.11em;
+//         text-transform: uppercase;
+//         white-space: nowrap;
+//         color: var(--ink);
+//         transform: translateX(0);
+//         transition: transform 0.52s $ease, color 0.3s linear;
+
+//         @media (max-width:360px) {
+//             font-size: 10px;
+//         }
+//     }
+
+//     .arrow {
+//         position: relative;
+//         display: flex;
+//         color: var(--ink);
+//         opacity: 1;
+//         transform: translateX(0);
+//         transition: opacity 0.3s linear, transform 0.52s $ease, color 0.3s linear;
+
+//         svg {
+//             width: var(--arrowSize);
+//             height: var(--arrowSize);
+//         }
+//     }
+
+//     &:hover,
+//     &:focus-visible {
+//         .fill {
+//             transform: scaleY(0);
+
+//             &.borderFill {
+//                 transform: none;
+//                 opacity: 0;
+//             }
+//         }
+
+//         .line {
+//             opacity: 1;
+//         }
+
+//         .label {
+//             color: var(--inkHover);
+//             transform: translateX(var(--shift));
+//         }
+
+//         .arrow {
+//             color: var(--inkHover);
+//             opacity: 0;
+//             transform: translateX(calc(var(--shift) * 1.6));
+//         }
+//     }
+
+//     &.primary {
+//         --ink: var(--black);
+//         --inkHover: var(--white);
+//         --fillColor: var(--navy);
+//     }
+
+//     &.primaryDark {
+//         --ink: var(--white);
+//         --inkHover: var(--saffron);
+//         --fillColor: var(--navy);
+//     }
+
+//     &.white {
+//         --fillColor: var(--white);
+//         --ink: var(--navy);
+//         --inkHover: var(--white);
+//     }
+
+//     &.outline {
+//         --ink: var(--white);
+//         --inkHover: var(--navy);
+//         --fillColor: var(--saffron);
+//     }
+
+//     &.outlineDark {
+//         --ink: var(--navy);
+//         --inkHover: var(--white);
+//         --fillColor: var(--saffron);
+
+//         background: transparent;
+//         border: 1px solid var(--navy);
+
+//         .fill {
+//             background: var(--saffron);
+//             transform: scaleY(0);
+//         }
+
+//         &:hover,
+//         &:focus-visible {
+//             background: transparent;
+
+//             .fill {
+//                 transform: scaleY(1);
+//             }
+
+//             .label,
+//             .arrow {
+//                 color: var(--white);
+//             }
+//         }
+//     }
+
+//     &.small {
+//         --arrowSize: 12px;
+//         --gap: 10px;
+//         height: 36px;
+//         padding: 0 16px;
+
+//         .line {
+//             padding: 1.4px;
+//         }
+
+//         .label {
+//             font-size: 9.5px;
+//             font-weight: 600;
+//             letter-spacing: 0.13em;
+//         }
+//     }
+
+//     &.medium {
+//         --arrowSize: 12px;
+//         --gap: 10px;
+//         height: 48px;
+//         padding: 0 16px;
+
+//         .line {
+//             padding: 1.4px;
+//         }
+
+//         .label {
+//             font-size: 9.5px;
+//             font-weight: 600;
+//             letter-spacing: 0.13em;
+//         }
+//     }
+
+//     &.noArrow {
+//         --shift: 0px;
+//     }
+
+//     &.disabled,
+//     &:disabled {
+//         opacity: 0.5;
+//         cursor: not-allowed;
+//         pointer-events: none;
+//     }
+// }
+
+.ctaButton {
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 0 solid transparent;
+    padding: 8px 24px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    background: var(--navy);
+    position: relative;
+    z-index: 0;
+
+    &.medium {
+        height: 48px;
+    }
+
+    &.outlineDark {
+        background: red;
+    }
+
+    .fill {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        left: 0;
+        top: 0;
+        background: var(--saffron);
+        z-index: -1;
+        // border: 1px solid transparent;
+        transition: all .5s ease-in-out;
+    }
+
+    &:hover {
+        // border: 1px solid var(--saffron);
+
+        .fill {
+            height: 100%;
+            transition: all .5s ease-in-out;
+        }
+    }
+
+    &.primaryDark {
+        position: relative;
+        background: transparent;
+        border: 1px solid var(--navy);
+        color: var(--navy);
+        transition: all .5s ease-in-out;
+
+        &:hover {
+            border: 1px solid var(--saffron);
+            color: var(--white);
+            transition: all .5s ease-in-out;
+        }
+    }
+}

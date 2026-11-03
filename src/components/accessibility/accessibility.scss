@@ -1,0 +1,96 @@
+html.a11y-line-spacing[data-a11y-line-spacing='1'] body :where(*):not(.a11y-widget):not(.a11y-widget *):not([data-no-a11y]):not([data-no-a11y] *) {
+    line-height: 1.1 !important;
+}
+
+html.a11y-line-spacing[data-a11y-line-spacing='2'] body :where(*):not(.a11y-widget):not(.a11y-widget *):not([data-no-a11y]):not([data-no-a11y] *) {
+    line-height: 1.2 !important;
+}
+
+html.a11y-line-spacing[data-a11y-line-spacing='3'] body :where(*):not(.a11y-widget):not(.a11y-widget *):not([data-no-a11y]):not([data-no-a11y] *) {
+    line-height: 1.3 !important;
+}
+
+html.a11y-letter-spacing[data-a11y-letter-spacing='1'] body :where(*):not(.a11y-widget):not(.a11y-widget *):not([data-no-a11y]):not([data-no-a11y] *) {
+    letter-spacing: 0.04em !important;
+}
+
+html.a11y-letter-spacing[data-a11y-letter-spacing='2'] body :where(*):not(.a11y-widget):not(.a11y-widget *):not([data-no-a11y]):not([data-no-a11y] *) {
+    letter-spacing: 0.08em !important;
+}
+
+html.a11y-letter-spacing[data-a11y-letter-spacing='3'] body :where(*):not(.a11y-widget):not(.a11y-widget *):not([data-no-a11y]):not([data-no-a11y] *) {
+    letter-spacing: 0.12em !important;
+}
+
+html.a11y-hide-images img:not([data-no-a11y] *),
+html.a11y-hide-images [role='img']:not([data-no-a11y] *),
+html.a11y-hide-images video:not([data-no-a11y] *),
+html.a11y-hide-images picture:not([data-no-a11y] *) {
+    visibility: hidden !important;
+}
+
+html.a11y-greyscale body> :where(*):not(.a11y-widget):not(.a11y-widget *):not([data-no-a11y]):not([data-no-a11y] *) {
+    filter: grayscale(100%);
+}
+
+html.a11y-low-sat body> :where(*):not(.a11y-widget):not(.a11y-widget *):not([data-no-a11y]):not([data-no-a11y] *) {
+    filter: saturate(25%);
+}
+
+html.a11y-high-contrast body> :where(*):not(.a11y-widget):not(.a11y-widget *):not([data-no-a11y]):not([data-no-a11y] *) {
+    filter: contrast(160%);
+}
+
+html.a11y-dark body> :where(*):not(.a11y-widget):not(.a11y-widget *):not([data-no-a11y]):not([data-no-a11y] *) {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+html.a11y-dark body> :where(*):not(.a11y-widget):not(.a11y-widget *):not([data-no-a11y]):not([data-no-a11y] *) img,
+html.a11y-dark body> :where(*):not(.a11y-widget):not(.a11y-widget *):not([data-no-a11y]):not([data-no-a11y] *) video,
+html.a11y-dark body> :where(*):not(.a11y-widget):not(.a11y-widget *):not([data-no-a11y]):not([data-no-a11y] *) [style*='background-image'] {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+html.a11y-highlight-links a:not([data-no-a11y] *),
+html.a11y-highlight-links a:visited:not([data-no-a11y] *) {
+    background-color: #fff3cd !important;
+    border-radius: 2px;
+    color: #1a1a1a !important;
+    padding: 0 2px;
+    text-decoration: underline 2px solid #e24b4a !important;
+}
+
+html.a11y-big-cursor body :where(*):not([data-no-a11y]):not([data-no-a11y] *) {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M8 4 L8 26 L14 20 L18 28 L21 27 L17 19 L24 19 Z' fill='black' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E") 0 0,
+        auto !important;
+}
+
+html.a11y-focus-indicator *:not([data-no-a11y]):not([data-no-a11y] *):focus-visible {
+    border-radius: 3px;
+    outline: 3px solid #e24b4a !important;
+    outline-offset: 3px !important;
+}
+
+html.a11y-reduce-motion *:not([data-no-a11y]):not([data-no-a11y] *),
+html.a11y-reduce-motion *:not([data-no-a11y]):not([data-no-a11y] *)::before,
+html.a11y-reduce-motion *:not([data-no-a11y]):not([data-no-a11y] *)::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+}
+
+html.a11y-dyslexia body :where(*):not(.a11y-widget):not(.a11y-widget *):not([data-no-a11y]):not([data-no-a11y] *) {
+    font-family: 'OpenDyslexic', 'Comic Sans MS', cursive !important;
+}
+
+.a11y-reading-ruler-line {
+    background: rgba(226, 75, 74, 0.5);
+    height: 2px;
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    transition: top 0.05s linear;
+    width: 100%;
+    z-index: 9999;
+}

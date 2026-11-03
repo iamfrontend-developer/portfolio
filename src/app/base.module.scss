@@ -1,0 +1,15 @@
+body {
+    font-family: var(--font-mukta), sans-serif;
+}
+
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px
+}
+
+.paddingTb {
+    padding-top: clamp(60px, 6.25vw, 120px);
+    padding-bottom: clamp(60px, 6.25vw, 120px);
+}
