@@ -35,7 +35,7 @@ export type HeroStat = {
 export const heroData: HeroData = {
     eyebrow: "Hello, I'm",
 
-    name: "Mahesh Tukaram Sutar",
+    name: "Mahesh Sutar",
 
     roles: [
         "Senior Frontend Developer",
@@ -50,7 +50,7 @@ export const heroData: HeroData = {
 
     profileImage: profilePhoto,
 
-    profileAlt: "Mahesh Tukaram Sutar",
+    profileAlt: "Mahesh Sutar",
 
     fallbackText: "MS",
 

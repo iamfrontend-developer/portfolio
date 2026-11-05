@@ -1,0 +1,17 @@
+.sectionHeading {
+    font-size: clamp(38px, 2.70vw, 52px);
+    line-height: clamp(44px, 3.02vw, 58px);
+    letter-spacing: -0.5px;
+    font-weight: 600;
+    color: var(--navy);
+    text-transform: capitalize;
+}
+
+.eyebrow {
+    color: var(--saffron);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}

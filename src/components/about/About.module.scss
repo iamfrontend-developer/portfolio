@@ -1,0 +1,73 @@
+.about {
+    position: relative;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 32px;
+    align-items: start;
+
+    @media (max-width: 760px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.eyebrow {
+    color: var(--saffron);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.sectionDescription {
+    color: var(--muted);
+    max-width: 520px;
+    font-size: clamp(14px, .83vw, 16px);
+    line-height: clamp(18px, 1.01vw, 20px);
+}
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.highlights {
+    margin-top: 18px;
+}
+
+.skills {
+    margin-top: 12px;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: var(--soft);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 0.9rem;
+}
+
+// Replaces the global .inv class: inverts black icons (e.g. Next.js) in dark mode
+.invert {
+    :global([data-theme="dark"]) & {
+        filter: invert(1);
+    }
+}
