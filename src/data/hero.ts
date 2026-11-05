@@ -14,6 +14,7 @@ export interface HeroButton {
 }
 
 export interface HeroData {
+    stats: any;
     eyebrow: string;
     name: string;
     roles: string[];
@@ -23,6 +24,13 @@ export interface HeroData {
     fallbackText: string;
     buttons: HeroButton[];
 }
+
+export type HeroStat = {
+    id: string;
+    value: string;
+    label: string;
+};
+
 
 export const heroData: HeroData = {
     eyebrow: "Hello, I'm",
@@ -63,4 +71,10 @@ export const heroData: HeroData = {
             variant: "primaryDark",
         },
     ],
+
+    stats: [
+        { id: "experience", value: "6.5+", label: "Years experience" },
+        { id: "projects", value: "12", label: "Selected projects" },
+        { id: "companies", value: "3", label: "Companies" },
+    ] as HeroStat[],
 };

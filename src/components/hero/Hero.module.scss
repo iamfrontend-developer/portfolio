@@ -193,3 +193,31 @@ $mobile: 991px;
         transition: none;
     }
 }
+
+.stats {
+    display: flex;
+    gap: 34px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+
+    @media (max-width: $mobile) {
+        justify-content: center;
+    }
+}
+
+.stat b {
+    display: block;
+    font-size: clamp(22px, 1.45vw, 28px);
+    line-height: clamp(28px, 1.77vw, 34px);
+    color: var(--navy);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.stat span {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var(--muted);
+    text-transform: capitalize;
+}

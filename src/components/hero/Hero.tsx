@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import baseStyle from "../../app/base.module.scss"
 import styles from "./Hero.module.scss";
-import { heroData } from "@/data/hero";
+import { heroData, type HeroStat } from "@/data/hero";
 import Button from "../common/button/Button";
 
 const Hero = () => {
@@ -155,6 +155,15 @@ const Hero = () => {
                                     align="left"
                                     className={styles.heroButton}
                                 />
+                            ))}
+                        </div>
+
+                        <div className={styles.stats}>
+                            {heroData.stats.map((stat: HeroStat) => (
+                                <div key={stat.id} className={styles.stat}>
+                                    <b>{stat.value}</b>
+                                    <span>{stat.label}</span>
+                                </div>
                             ))}
                         </div>
                     </div>
