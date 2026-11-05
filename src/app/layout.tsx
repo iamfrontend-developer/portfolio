@@ -65,6 +65,7 @@ export default function RootLayout({
       lang="en"
       className={`${mukta.variable}`}
     >
+      
       <body>
         <A11yProvider>
           <SmoothScroll />

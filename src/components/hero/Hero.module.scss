@@ -1,3 +1,11 @@
+:root {
+    --avatarBorder: #f9f9f9;
+}
+
+:root[data-theme="dark"] {
+    --avatarBorder: #414141;
+}
+
 $mobile: 991px;
 
 .hero {
@@ -140,16 +148,16 @@ $mobile: 991px;
     width: clamp(280px, 18.75vw, 360px);
     height: clamp(280px, 18.75vw, 360px);
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--navy), #2a5d96);
+    background: var(--navy);
 
     display: grid;
     place-items: center;
 
-    color: #fff;
+    color: var(--white);
     font-size: 4rem;
     font-weight: 800;
 
-    border: 6px solid #fff;
+    border: 10px solid var(--avatarBorder);
     box-shadow: 0 10px 30px rgba(18, 54, 95, 0.2);
 
     overflow: hidden;

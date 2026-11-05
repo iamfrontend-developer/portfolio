@@ -1,12 +1,20 @@
+:root {
+    --border: #e8e4db;
+}
+
+:root[data-theme="dark"] {
+    --border: #5d5d5d;
+}
+
 .header {
     -webkit-backdrop-filter: blur(16px);
     width: 100%;
     position: sticky;
     top: 0;
     z-index: 20;
-    background: rgba(251, 250, 247, .92);
+    background: var(--bg);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid #e8e4db;
+    border-bottom: 1px solid var(--border);
 }
 
 // Logo
@@ -31,7 +39,7 @@
 }
 
 .navLink {
-    color: var(--muted);
+    color: var(--navy);
     font-size: clamp(14px, 0.83vw, 16px);
     line-height: clamp(18px, 1.01vw, 20px);
     font-weight: 500;
@@ -197,9 +205,12 @@
 
 .theameModeWrapper {
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.theameModeButton {
+.modeButton {
     position: relative;
     width: 38px;
     height: 38px;

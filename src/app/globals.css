@@ -13,7 +13,12 @@
 
 :root[data-theme="dark"] {
     --bg: #0d1523;
-    --white:#142034;
+    --white: #142034;
+    --text: #e6e9f0;
+    --muted: #98a2b3;
+    --line: #243049;
+    --soft: #1e2a40;
+    --navy: #fff; /* optional: lighter navy so it stays readable */
     color-scheme: dark;
 }
 [data-theme="dark"] .inv {
