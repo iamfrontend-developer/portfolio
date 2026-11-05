@@ -11,6 +11,7 @@ $label-color: #222;
 .accesibilityWrapper {
     position: relative;
     z-index: 20;
+
     // margin-top: 20px;
     .closeButtonWrapper {
         justify-content: end;
@@ -52,6 +53,7 @@ $label-color: #222;
             transition: all .5s ease-in-out;
             z-index: 1;
             margin-top: 20px;
+
             @media (max-width:991px) {
                 right: 0;
                 bottom: 0;
@@ -200,6 +202,7 @@ $label-color: #222;
     .resetBtn {
         min-width: 120px;
         height: 44px;
+        justify-content: center;
     }
 
     .fab {

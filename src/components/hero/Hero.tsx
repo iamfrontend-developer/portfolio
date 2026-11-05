@@ -166,7 +166,7 @@ const Hero = () => {
                             {heroData.fallbackText}
                         </span>
 
-                        {/* {!imageError && (
+                        {!imageError && (
                             <Image
                                 src={heroData.profileImage}
                                 alt={heroData.profileAlt}
@@ -176,7 +176,7 @@ const Hero = () => {
                                 className={styles.profileImage}
                                 onError={() => setImageError(true)}
                             />
-                        )} */}
+                        )}
 
                     </div>
                 </div>

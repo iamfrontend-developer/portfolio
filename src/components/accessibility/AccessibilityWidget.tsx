@@ -13,6 +13,7 @@ import greyscaleIcon from '@/assets/images/grayscale.svg'
 import lowSaturationIcon from '@/assets/images/lowsaturation.svg'
 import highlightLinksIcon from '@/assets/images/highlightlinks.svg'
 import Image from 'next/image'
+import Button from '../common/button/Button'
 interface Tile {
     id: A11yFeature
     label: string
@@ -167,14 +168,13 @@ export default function AccessibilityWidget() {
                     ))}
 
                     <div className={styles.resetRow}>
-                        {/* <Button
+                        <Button
                             text="Reset"
                             variant="primary"
-                            icon=""
                             showArrow={false}
                             onClick={reset}
                             className={styles.resetBtn}
-                        /> */}
+                        />
 
 
                     </div>

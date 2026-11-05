@@ -8,7 +8,6 @@ import Header from "@/components/header/Header";
 import AccessibilityWidget from "@/components/accessibility/AccessibilityWidget";
 import { A11yProvider } from "@/components/accessibility/AccessibilityContext";
 import "@/components/accessibility/accessibility.scss";
-import FloatingBar from "@/components/floating-bar/FloatingBar";
 
 // Headings
 const mukta = localFont({
@@ -65,14 +64,13 @@ export default function RootLayout({
       lang="en"
       className={`${mukta.variable}`}
     >
-      
+
       <body>
         <A11yProvider>
           <SmoothScroll />
           <Header />
           {children}
           <AccessibilityWidget />
-          <FloatingBar />
         </A11yProvider>
       </body>
     </html>

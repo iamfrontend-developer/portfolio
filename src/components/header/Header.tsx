@@ -6,12 +6,14 @@ import { navigation } from "@/data/navigation";
 import baseStyle from "../../app/base.module.scss";
 import styles from "./Header.module.scss";
 import { Moon, PersonStanding, Sun } from "lucide-react";
+import { useA11y } from "../accessibility/AccessibilityContext";
 
 type Theme = "light" | "dark";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState<Theme>("light");
+  const { toggleWidget } = useA11y();
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -28,6 +30,11 @@ const Header = () => {
     try {
       localStorage.setItem("theme", next);
     } catch { }
+  };
+
+  const handleAccessibility = () => {
+    toggleWidget();
+    closeMenu(); // closes the mobile menu so the widget isn't hidden behind it
   };
 
   return (
@@ -72,8 +79,9 @@ const Header = () => {
               <button
                 type="button"
                 className={`${styles.accessibiliityButton} ${styles.modeButton}`}
-                onClick={toggleTheme}
-                aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+                onClick={handleAccessibility}
+                aria-label="Open accessibility options"
+                aria-haspopup="dialog"
               >
                 <PersonStanding width={18} height={18} strokeWidth={2} />
               </button>
