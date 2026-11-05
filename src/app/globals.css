@@ -11,6 +11,15 @@
     --soft: #fff4e8
 }
 
+:root[data-theme="dark"] {
+    --bg: #0d1523;
+    --white:#142034;
+    color-scheme: dark;
+}
+[data-theme="dark"] .inv {
+    filter: invert(1);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

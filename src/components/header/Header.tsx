@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { navigation } from "@/data/navigation";
 import baseStyle from "../../app/base.module.scss"
 import styles from "./Header.module.scss";
+import { Moon } from "lucide-react";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,6 +24,7 @@ const Header = () => {
           </Link>
 
           {/* Navigation */}
+
           <nav
             className={`${styles.nav} ${menuOpen ? styles.navOpen : ""
               }`}
@@ -38,13 +41,11 @@ const Header = () => {
               </Link>
             ))}
 
-            <Link
-              href="#contact"
-              className={styles.mobileContact}
-              onClick={closeMenu}
-            >
-              Let's Talk
-            </Link>
+            <div className={styles.theameModeWrapper}>
+              <button className={styles.theameModeButton}>
+                <Moon width={18} height={18} strokeWidth={2} />
+              </button>
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}

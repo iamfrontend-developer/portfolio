@@ -1,3 +1,5 @@
+$mobile: 991px;
+
 .hero {
     position: relative;
     overflow: hidden;
@@ -7,14 +9,23 @@
 
 .wrap {
     display: grid;
-    grid-template-columns: 1fr 260px;
+    grid-template-columns: 1fr 360px;
     gap: 40px;
     align-items: center;
+
+    @media (max-width:$mobile) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
 
 // Hero Content
 .content {
     min-width: 0;
+
+    @media (max-width:$mobile) {
+        text-align: center;
+    }
 
     .eyebrow {
         font-size: 16px;
@@ -24,8 +35,8 @@
     }
 
     h1 {
-        font-size: clamp(2rem, 5vw, 3.2rem);
-        line-height: 1.2;
+        font-size: clamp(42px, 2.81vw, 54px);
+        line-height: clamp(46px, 3.02vw, 58px);
         letter-spacing: -0.5px;
         font-weight: 700;
         color: var(--navy);
@@ -38,13 +49,18 @@
     align-items: center;
     flex-wrap: wrap;
     min-height: 1.8em;
-    font-size: 1.35rem;
+    font-size: clamp(18px, 1.14vw, 22px);
+    line-height: clamp(24px, 1.35vw, 26px);
     font-weight: 600;
     margin: 10px 0 14px;
     color: var(--saffron);
 
     span:first-child {
         display: inline-block;
+    }
+
+    @media (max-width:$mobile) {
+        justify-content: center;
     }
 }
 
@@ -69,8 +85,8 @@
 .description {
     color: var(--muted);
     max-width: 520px;
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: clamp(14px, 0.83vw, 16px);
+    line-height: clamp(18px, 1.01vw, 20px);
 }
 
 // Buttons
@@ -121,8 +137,8 @@
 // Profile Avatar
 .avatar {
     position: relative;
-    width: 240px;
-    height: 240px;
+    width: clamp(280px, 18.75vw, 360px);
+    height: clamp(280px, 18.75vw, 360px);
     border-radius: 50%;
     background: linear-gradient(135deg, var(--navy), #2a5d96);
 

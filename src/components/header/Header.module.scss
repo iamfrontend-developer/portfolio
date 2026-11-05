@@ -187,3 +187,34 @@
     align-items: center;
     height: 60px;
 }
+
+.headerRight {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theameModeWrapper {
+    position: relative;
+}
+
+.theameModeButton {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: var(--white);
+    color: var(--navy);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: .2s;
+
+    &:hover {
+        border-color: var(--saffron);
+        color: var(--saffron);
+        transition: .2s;
+    }
+}
