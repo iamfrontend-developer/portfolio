@@ -103,6 +103,10 @@ $mobile: 991px;
     gap: 12px;
     margin-top: 24px;
     flex-wrap: wrap;
+
+    @media (max-width:991px) {
+        gap: 8px;
+    }
 }
 
 .btn {
@@ -196,12 +200,14 @@ $mobile: 991px;
 
 .stats {
     display: flex;
-    gap: 34px;
+    gap: clamp(10px, 1.77vw, 34px);
     margin-top: 30px;
     flex-wrap: wrap;
 
     @media (max-width: $mobile) {
         justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -220,4 +226,9 @@ $mobile: 991px;
     font-weight: 400;
     color: var(--muted);
     text-transform: capitalize;
+
+    @media (max-width:991px) {
+        display: flex;
+        justify-content: center;
+    }
 }

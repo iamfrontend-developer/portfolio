@@ -1,7 +1,15 @@
 import type { StaticImageData } from "next/image";
-import html5 from "../assets/images/icons/html5-original.svg"
-import css3 from "../assets/images/icons/css3-original.svg"
-import javascript from "../assets/images/icons/javascript-original.svg"
+import html5 from "../assets/images/skills/html.png"
+import css3 from "../assets/images/skills/css.png"
+import javascript from "../assets/images/skills/javascript.png"
+import react from "../assets/images/skills/react.png"
+import nextjs from "../assets/images/skills/nextjs.png"
+import sass from "../assets/images/skills/sass.png"
+import tailwind from "../assets/images/skills/tailwand.png"
+import bootstrap from "../assets/images/skills/bootstrap.png"
+import jquery from "../assets/images/skills/jquery.png"
+import gsap from "../assets/images/skills/gsap.png"
+import git from "../assets/images/skills/git.png"
 
 export type Skill = {
     name: string;
@@ -34,17 +42,17 @@ export const aboutData: AboutData = {
         { name: "HTML5", icon: html5 },
         { name: "CSS3", icon: css3 },
         { name: "JavaScript", icon: javascript },
-        { name: "React", icon: "react" },
-        { name: "Next.js", icon: "nextjs", invertOnDark: true },
-        { name: "Sass", icon: "sass" },
-        { name: "Tailwind CSS", icon: "tailwind" },
-        { name: "Bootstrap", icon: "bootstrap" },
-        { name: "jQuery", icon: "jquery" },
-        { name: "GSAP", icon: "gsap" },
-        { name: "Git", icon: "git" },
-        { name: "UI Design" },
-        { name: "Design Thinking" },
-        { name: "Interaction Design" },
-        { name: "Responsive Design" },
+        { name: "React", icon: react },
+        { name: "Next.js", icon: nextjs, invertOnDark: true },
+        { name: "Sass", icon: sass },
+        { name: "Tailwind CSS", icon: tailwind },
+        { name: "Bootstrap", icon: bootstrap, },
+        { name: "jQuery", icon: jquery },
+        { name: "GSAP", icon: gsap, invertOnDark: true },
+        { name: "Git", icon: git },
+        // { name: "UI Design" },
+        // { name: "Design Thinking" },
+        // { name: "Interaction Design" },
+        // { name: "Responsive Design" },
     ],
 };

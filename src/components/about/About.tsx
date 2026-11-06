@@ -38,16 +38,18 @@ const About = ({ data }: AboutProps) => {
 
                         <ul className={`${styles.chips} ${styles.skills}`}>
                             {data.skills.map(({ name, icon, invertOnDark }) => (
-                                <li key={name} className={styles.chip}>
-                                    {icon && (
-                                        <Image
-                                            src={icon}
-                                            alt=""
-                                            width={16}
-                                            height={16}
-                                            className={invertOnDark ? styles.invert : undefined}
-                                        />
-                                    )}
+                                <li key={name} className={styles.skillChip}>
+                                    <div className={styles.skillIconBox}>
+                                        {icon && (
+                                            <Image
+                                                src={icon}
+                                                alt=""
+                                                width={16}
+                                                height={16}
+                                                className={invertOnDark ? styles.invert : undefined}
+                                            />
+                                        )}
+                                    </div>
                                     {name}
                                 </li>
                             ))}
