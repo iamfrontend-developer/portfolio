@@ -11,7 +11,7 @@ $mobile: 991px;
 .hero {
     position: relative;
     overflow: hidden;
-
+    padding-top: clamp(80px, 12.5vw, 240px);
 
 }
 
